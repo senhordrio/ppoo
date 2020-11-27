@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Principal {
     private static Scanner entrada = new Scanner(System.in);
-    private static AplicacaoFinanceira ap = new AplicacaoFinanceira(0);
+    private static AplicacaoFinanceira apf;
 
     public static void main(String[] args) {
         System.out.println("###### SIMULACÃO ######");
@@ -25,16 +25,16 @@ public class Principal {
         double selic = entrada.nextDouble();
         System.out.print("Entre com o valor da taxa referencial (TR) em %: ");
         double tr = entrada.nextDouble();
-        Poupanca poupanca = new Poupanca(valor, selic, tr);
-        poupanca.simulaPoupanca(meses);
+        apf = new Poupanca(valor, meses, selic, tr);
+        apf.simulaInvestimento();
     }
 
     public static void investimentoEmCDB(double valor, int meses) {
         System.out.println("2 - Investimento em CDB");
         System.out.print("Entre com o valor da taxa CDI em %: ");
         double cdi = entrada.nextDouble();
-        CDB cdb = new CDB(valor, cdi);
-        cdb.simulaCDB(meses);
+        apf = new CDB(valor, meses, cdi);
+        apf.simulaInvestimento();
     }
 
     public static void investimentoEmAcao(double valor, int meses) {
@@ -43,7 +43,7 @@ public class Principal {
         double pInicial = entrada.nextDouble();
         System.out.print("Entre com o preço final da ação: ");
         double pFinal = entrada.nextDouble();
-        Acao acao = new Acao(valor, pInicial, pFinal);
-        acao.simulaAcao(meses);
+        apf = new Acao(valor, meses, pInicial, pFinal);
+        apf.simulaInvestimento();
     }
 }

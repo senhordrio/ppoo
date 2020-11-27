@@ -3,19 +3,19 @@ package banco;
 public class CDB extends AplicacaoFinanceira {
     private double taxaCdi;
 
-    public CDB(double v, double cdi) {
-        super(v);
+    public CDB(double valor, int meses, double cdi) {
+        super(valor, meses);
         this.taxaCdi = cdi;
     }
 
-    public void simulaCDB(int meses){
+    @Override public void simulaInvestimento() {
         double valor = getValor();
-        double rendimento = calculaRendimentoCDB(meses);
-        System.out.printf("Valor final para investimento em CDB: R$ %f", (valor + (valor * rendimento)));
+        double rendimento = calculaRendimentoCDB(getMeses());
+        System.out.printf("Valor final para investimento em CDB: R$ %.2f", (valor + (valor * rendimento)));
     }
 
-    public double calculaRendimentoCDB(int meses){
-        double rendimento = 1.2 * (taxaCdi/100);
+    public double calculaRendimentoCDB(int meses) {
+        double rendimento = 1.2 * (taxaCdi / 100);
         return rendimento * meses;
     }
 }
