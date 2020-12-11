@@ -45,8 +45,8 @@ public class Analisador {
         }
     }
 
-    public void mostrarComandosDisponiveis() {
-        palavrasDeComando.imprimirPalavrasDeComando();
+    public String mostrarComandosDisponiveis() {
+        return palavrasDeComando.imprimirPalavrasDeComando();
     }
 
 }

@@ -120,7 +120,7 @@ public class Jogo {
      */
     private void imprimirAjuda() {
         System.out.println("Suas palavras de comando sao: ");
-        analisador.mostrarComandosDisponiveis();
+        System.out.println(analisador.mostrarComandosDisponiveis());
     }
 
     /**

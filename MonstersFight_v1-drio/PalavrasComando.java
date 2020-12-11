@@ -22,11 +22,12 @@ public class PalavrasComando {
         return false;
     }
 
-    public void imprimirPalavrasDeComando() {
+    public String imprimirPalavrasDeComando() {
+        String strPalavras = "";
         for (int i = 0; i < comandosValidos.length; i++) {
-            System.out.print("\t" + comandosValidos[i] + " ");
+            strPalavras += "\t" + comandosValidos[i];
         }
-        System.out.println();
+        return strPalavras;
     }
 
 }
