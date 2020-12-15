@@ -10,8 +10,6 @@ public abstract class BeneficiarioPublico extends Beneficiario{
 
     public abstract String calcularContribuicao();
 
-    public abstract String calcularAposentadoria();
-
     @Override
     public String toString(){
       return super.toString() + "\n" + "Contribuicao INSS: " + calcularContribuicao();

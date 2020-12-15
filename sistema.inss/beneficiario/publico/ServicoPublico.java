@@ -15,8 +15,6 @@ public class ServicoPublico extends BeneficiarioPublico{
 
     @Override
     public String calcularContribuicao() {
-        double contribuicao = 0.14 * this.mediaSalarial;
-        return String.format("%.2f", contribuicao);
+        return String.format("%.2f", 0.14 * this.mediaSalarial);
     }
-
 }

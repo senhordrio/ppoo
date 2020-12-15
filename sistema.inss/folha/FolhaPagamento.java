@@ -1,5 +1,4 @@
 package folha;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +8,7 @@ public class FolhaPagamento {
     private List<Beneficiario> listaBeneficiarios;
 
     public FolhaPagamento(){
-        this.listaBeneficiarios = new ArrayList<Beneficiario>();
+        this.listaBeneficiarios = new ArrayList<>();
     }
 
     public void cadastrarBeneficiario(Beneficiario b){
