@@ -19,6 +19,7 @@ public class FolhaPagamento {
     public void gerarFolhaPagamento(){
        for(Beneficiario b: listaBeneficiarios){
            System.out.println(b);
+           System.out.println();
        }
     }
 }

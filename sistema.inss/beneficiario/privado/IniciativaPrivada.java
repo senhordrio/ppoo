@@ -11,7 +11,8 @@ public class IniciativaPrivada extends Beneficiario {
     }
 
     @Override
-    public double calcularAposentadoria() {
-        return percentualINSS * 5645.80;
+    public String calcularAposentadoria() {
+
+        return String.format("%.2f", (double)percentualINSS/100 * 5645.80);
     }
 }

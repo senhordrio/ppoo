@@ -15,6 +15,13 @@ public class Principal {
         ben = new ServicoPublico("987.654.321-0","Chico",12000.0);
         fp.cadastrarBeneficiario(ben);
         ben = new ForcasArmadas("234.567.890-1","Bento",15000.0);
+        fp.cadastrarBeneficiario(ben);   
+        //TESTES: adicionando mais outros beneficiarios
+        ben = new IniciativaPrivada("133.452.789-7","Seu Jorge",50);
+        fp.cadastrarBeneficiario(ben); 
+        ben = new ServicoPublico("987.123.321-0","Jorge Benjor",22000.0);
+        fp.cadastrarBeneficiario(ben);
+        ben = new ForcasArmadas("994.567.890-1","Benedito Ruy Barbosa",1000.0);
         fp.cadastrarBeneficiario(ben);
         //Geração da folha de pagamentos
         fp.gerarFolhaPagamento();  

@@ -9,12 +9,12 @@ public class ForcasArmadas extends BeneficiarioPublico {
     }
 
     @Override
-    public double calcularAposentadoria() {
-        return 0.9 * this.ultimoSalario;
+    public final String calcularAposentadoria() {
+        return String.format("%.2f", 0.9 * this.ultimoSalario);
     }
 
     @Override
-    public double calcularContribuicao() {
-        return 0.11 * this.ultimoSalario;
+    public final String calcularContribuicao() {
+        return String.format("%.2f", 0.11 * this.ultimoSalario);
     }
 }

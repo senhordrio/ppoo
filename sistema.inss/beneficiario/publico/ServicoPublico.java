@@ -9,13 +9,14 @@ public class ServicoPublico extends BeneficiarioPublico{
     }
 
     @Override
-    public double calcularAposentadoria() {
-        return 0.8 * this.mediaSalarial;
+    public String calcularAposentadoria() {
+        return String.format("%.2f", 0.8 * this.mediaSalarial);
     }
 
     @Override
-    public double calcularContribuicao() {
-        return 0.14 * this.mediaSalarial;
+    public String calcularContribuicao() {
+        double contribuicao = 0.14 * this.mediaSalarial;
+        return String.format("%.2f", contribuicao);
     }
 
 }
