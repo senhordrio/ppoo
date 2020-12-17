@@ -1,17 +1,6 @@
 package beneficiario.publico;
 
-import beneficiario.Beneficiario;
+interface BeneficiarioPublico {
 
-public abstract class BeneficiarioPublico extends Beneficiario{
-
-    public BeneficiarioPublico(String cpf, String nome){
-        super(cpf, nome);
-    }
-
-    public abstract String calcularContribuicao();
-
-    @Override
-    public String toString(){
-      return super.toString() + "\n" + "Contribuicao INSS: " + calcularContribuicao();
-    }
+  String calcularContribuicao();
 }

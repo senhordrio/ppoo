@@ -2,7 +2,7 @@ package beneficiario.privado;
 
 import beneficiario.Beneficiario;
 
-public class IniciativaPrivada extends Beneficiario {
+public final class IniciativaPrivada extends Beneficiario {
     private int percentualINSS;
 
     public IniciativaPrivada(String cpf, String nome, int porcentagem) {
@@ -11,7 +11,7 @@ public class IniciativaPrivada extends Beneficiario {
     }
 
     @Override
-    public String calcularAposentadoria() {
+    public final String calcularAposentadoria() {
         return String.format("%.2f", (double)percentualINSS/100 * 5645.80);
     }
 
