@@ -4,6 +4,7 @@ import beneficiario.Beneficiario;
 
 public final class IniciativaPrivada extends Beneficiario {
     private int percentualINSS;
+    private static final double TETOINSS = 5645.80;
 
     public IniciativaPrivada(String cpf, String nome, int porcentagem) {
         super(cpf, nome);
@@ -11,8 +12,8 @@ public final class IniciativaPrivada extends Beneficiario {
     }
 
     @Override
-    public final String calcularAposentadoria() {
-        return String.format("%.2f", (double)percentualINSS/100 * 5645.80);
+    public final double calcularAposentadoria() {
+        return (double)percentualINSS/100 * TETOINSS;
     }
 
 }
