@@ -11,17 +11,17 @@ public final class ForcasArmadas extends Beneficiario implements BeneficiarioPub
     }
 
     @Override
-    public final String calcularAposentadoria() {
-        return String.format("%.2f", 0.9 * this.ultimoSalario);
+    public final double calcularAposentadoria() {
+        return 0.9 * this.ultimoSalario;
     }
 
     @Override
-    public final String calcularContribuicao() {
-        return String.format("%.2f", 0.11 * this.ultimoSalario);
+    public final double calcularContribuicao() {
+        return 0.11 * this.ultimoSalario;
     }
 
     @Override
     public String toString(){
-        return super.toString() + "\n" + "Contribuicao INSS: " + calcularContribuicao();
+        return super.toString() + "\n" + "Contribuicao INSS: " + String.format("%.2f", calcularContribuicao());
     }
 }

@@ -2,5 +2,5 @@ package beneficiario.publico;
 
 interface BeneficiarioPublico {
 
-  String calcularContribuicao();
+  double calcularContribuicao();
 }

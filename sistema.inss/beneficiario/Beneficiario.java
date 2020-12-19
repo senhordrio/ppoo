@@ -9,7 +9,7 @@ public abstract class Beneficiario {
         this.nome = nome;
     }
 
-    public abstract String calcularAposentadoria();
+    public abstract double calcularAposentadoria();
 
     public String getCpf(){
       return this.cpf;
@@ -21,6 +21,6 @@ public abstract class Beneficiario {
 
     @Override
     public String toString(){
-      return "Nome: " + getNome() + "\n" + "Cpf: " + getCpf() + "\n" + "Aposentadoria: " + calcularAposentadoria();
+      return "Nome: " + getNome() + "\n" + "Cpf: " + getCpf() + "\n" + "Aposentadoria: " + String.format("%.2f", calcularAposentadoria());
     }
 }
