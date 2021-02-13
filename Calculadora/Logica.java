@@ -3,7 +3,7 @@
  *  analisando expressões infixas para resolver as 
  * precedências dos operadores.
  * 
- * ReferÊncias: 
+ * Referências: 
  * - https://en.wikipedia.org/wiki/Shunting-yard_algorithm#:~:text=In%20computer%20science%2C%20the%20shunting,abstract%20syntax%20tree%20(AST).
  * - https://stackoverflow.com/questions/13421424/how-to-evaluate-an-infix-expression-in-just-one-scan-using-stacks
  */
